@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="AddNoteTitle">Add Note</string>
+    <string name="splashscreen_title">Life is too fast. \n Don\'t forget anything. Note it down.</string>
+</resources>
