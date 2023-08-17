@@ -97,6 +97,12 @@
                 android:layout_height="20dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/yellow_shape" />
+             <ImageView
+                android:id="@+id/imgShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:src="@drawable/ic_share_black_24dp"/>
 
         </LinearLayout>
         <com.google.android.material.textfield.TextInputLayout
