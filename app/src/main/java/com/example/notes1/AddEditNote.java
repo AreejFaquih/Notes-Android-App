@@ -59,6 +59,12 @@ public class AddEditNote extends AppCompatActivity {
 
             getSupportActionBar().setTitle(R.string.AddNoteTitle);
         }
+         addEditNoteBinding.imgShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shareNote();
+            }
+        });
 
         addEditNoteBinding.imgRed.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,6 +111,16 @@ public class AddEditNote extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void shareNote() {
+        Intent shareNoteIntent = new Intent();
+        shareNoteIntent.setAction(Intent.ACTION_SEND);
+        shareNoteIntent.putExtra(Intent.EXTRA_TEXT, getIntent().getStringExtra(EXTRA_NOTE));
+        shareNoteIntent.setType("text/plain");
+        if (shareNoteIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(shareNoteIntent);
+        }
     }
 
 
